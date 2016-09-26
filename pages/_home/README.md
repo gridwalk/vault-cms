@@ -1,1 +1,1 @@
-This is your homepage. The folder must be called _home.
+This is your homepage. Add media here! The folder must be called _home.
