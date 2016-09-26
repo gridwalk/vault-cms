@@ -18,7 +18,7 @@ function split2($string,$needle,$nth){
 
 function get_site_url(){
   // local or remote server
-  $site_url = 'http://'.$_SERVER['HTTP_HOST'];
+  $site_url = 'http://'.$_SERVER['HTTP_HOST'].'/'.$_SERVER['REQUEST_URI'];
   if( strpos($site_url, 'localhost') !== false ){
     $site_url = 'http://'.$_SERVER['HTTP_HOST'] . '/vicovault.com';
   }
