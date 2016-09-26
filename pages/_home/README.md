@@ -1,0 +1,1 @@
+This is your homepage. The folder must be called _home.

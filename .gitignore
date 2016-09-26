@@ -1,5 +1,8 @@
 .DS_Store
 
 pages/*
-!pages/_home/README.md
 !pages/README.md
+
+!pages/_home
+pages/_home/*
+!pages/_home/README.md
