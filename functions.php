@@ -17,11 +17,10 @@ function split2($string,$needle,$nth){
 
 
 function get_site_url(){
-  // local or remote server
-  $site_url = 'http://'.$_SERVER['HTTP_HOST'].'/'.$_SERVER['REQUEST_URI'];
-  if( strpos($site_url, 'localhost') !== false ){
-    $site_url = 'http://'.$_SERVER['HTTP_HOST'] . '/vicovault.com';
-  }
+
+  $install_dir = str_replace('/index.php', '', $_SERVER['PHP_SELF']);
+  $site_url = 'http://'.$_SERVER['HTTP_HOST'].$install_dir;
+  
   return $site_url;
 }
 
@@ -86,5 +85,15 @@ function get_latest_posts(){
 
   $posts = array_slice($posts, 0, 10);
   return $posts;
+
+}
+
+function get_requested_path(){
+
+  $site_url = get_site_url();
+
+  // get request without leading slash, with trailing slash, without domain name at the start
+  $requested_path = str_replace($site_url.'/', '', $_SERVER['SCRIPT_URI'].'/');
+  return $requested_path;
 
 }

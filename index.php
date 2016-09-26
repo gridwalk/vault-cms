@@ -1,4 +1,8 @@
+
+
 <?
+
+
 
 require('functions.php');
 
@@ -63,8 +67,7 @@ foreach ($media as $key => $filename) {
 // get arrays of pages inside each subpage
 $subpages = array();
 
-// get request without leading slash, with trailing slash, without vicovault.com/ at the start
-$request = str_replace('vicovault.com/', '', substr($_SERVER['REQUEST_URI'],1) . '/');
+$request = get_requested_path();
 
 // step through each level of the URL path
 $n = 1;
