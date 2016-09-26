@@ -1,0 +1,1 @@
+Add folders to this directory. Eavery folder is a top-level navigation link. Each folder can contain media and more folders. You can nest folders infinitely.
