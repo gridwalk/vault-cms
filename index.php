@@ -1,8 +1,4 @@
-
-
 <?
-
-
 
 require('functions.php');
 
@@ -101,8 +97,8 @@ echo '<script>';
 echo   'var siteURL  = "'.$site_url.'";';
 echo   'var pages    = '.$pages.';';
 echo   'var page     = "'.$page.'";';
-echo   'var media    = '.json_encode($media).';';
-echo   'var subpages = '.json_encode($subpages).';';
+echo   'var media    = '.json_encode(utf8ize($media)).';';
+echo   'var subpages = '.json_encode(utf8ize($subpages)).';';
 echo '</script>';
 
 
