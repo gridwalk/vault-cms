@@ -178,22 +178,20 @@ for( var i in media){
 
   <?
 
-  // if( $page == 'home' ){
-    echo "<span>Pages Updated Recently:</span>";
+  echo "<span>Pages Updated Recently:</span>";
 
-    $latest = get_latest_posts();
-  
-    foreach ($latest as $key => $value) {
-      
-      $path = $latest[$key][path];
+  $latest = get_latest_posts();
 
-      echo "<a href='/".$path."'>".$path."</a>";
-      echo " - ";
-      echo date('F j, Y', $latest[$key][timestamp]);
-      echo '<br>';
+  foreach ($latest as $key => $value) {
+    
+    $path = $latest[$key][path];
 
-    }
-  // }
+    echo "<a href='".$site_url."/".$path."'>".$path."</a>";
+    echo " - ";
+    echo date('F j, Y', $latest[$key][timestamp]);
+    echo '<br>';
+
+  }
 
   ?>
 </div>
